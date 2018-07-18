@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" id="viewport" content="width = device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<title>确认订单</title>
+<link rel="stylesheet" type="text/css" href="css/example.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/weui.min.css">
+<link rel="stylesheet" href="css/jq-weui.css">
+</head>
+<body>
+	<div class="weui-toptips weui-toptips_warn js_tooltips"></div>
+	<div id="container" class="container">
+		<div class="page tabbar js_show">
+			<div class="page__bd" style="height: 100%;">
+				<div class="weui-tab">
+		            <div class="weui-tab__panel pad0">
+						
+						<!-- 头部 -->
+		            	<div class="we-title">
+					        	<a class="page-left" href="index.html"><img src="img/back_icon.png" alt="" /></a>
+					    </div>
+						<div class="order-content">		          
+			              <div class="weui-cells weui-cells_form" style="margin-top: 0;">
+			              	<div class="weui-cell">
+			              	<a href="新增收货地址.html" style="width: 100%;">
+						     <div class="we-order-col1">
+						     		<div class="order-area1">
+						     			<img class="order-area1-tx" src="img/order-head.png" alt="" />
+						     			<div class="area1-username">
+						     				收货人：<p id="or-name">马飞飞</p>
+						     			</div>
+						     			<p class="area1-phone" id="or-id">13739235250</p>
+						     		</div>
+						     		<div class="order-area2">
+						     			<div class="area2-img">
+						     				<img class="order-area2-dz" src="img/order-address.png" alt="" />
+						     				</div>
+						     			<div class="area2-address">
+						     				<p>收货地址：<span id="or-add">江苏省常州市武进区天安数码城c座606个单1s1s1大叔大婶发生发发法发顺丰</span></p>
+						     			</div>
+						     			<div class="area2-img-ri">
+						     				<img class="area2-i" src="img/more_icon.png" alt="" />
+						     				</div>
+						     		</div>
+						     </div>
+						     </a>
+						   </div>
+						   </div>
+						 
+						   <div class="weui-cells weui-cells_form">
+						   	 <div class="order-col2">
+						   	 	<div class="order-sp">
+						   	 		<div class="order-sp-img">
+						   	 			<img src="img/sp-img.png" alt="" />
+						   	 		</div>
+						   	 		<div class="order-sp-text">
+						   	 			<h1>ASM智能血压仪</h1>
+						   	 			<p>¥<span class="order-goods-number">123.87</span></p>
+						   	 		</div>
+						   	 	</div>
+						   	 	<div class="order-number">
+						   	 		<div class="weui-cell">
+							            <div class="weui-cell__bd">
+							              <p>购买数量</p>
+							            </div>
+							            <div class="weui-cell__ft">
+							              <div class="weui-count">
+							                <input disabled="disabled" class="weui-count__number" type="number" value="1">
+							              </div>
+							            </div>
+							          </div>
+						   	 	</div>
+						   	 	<div class="order-total">
+						   	 		<p>小计：<span>¥</span><span class="total-all">123.87</span></p>
+						   	 	</div>
+						   	 </div>
+						   </div>
+						   
+						   <div class="weui-cells_form order-col3">
+						   	<div class="order-col3-title">
+						   		<p>支付方式</p>
+						   	</div>
+						   	<div class="weui-cells_checkbox">
+					            <label class="weui-cell weui-check__label" for="s11">
+					            	    <div class="weui-cell__bd order-area3">
+					            	      	<img src="img/order-weixin.png" alt="" />
+					                    <p>微信</p>
+					                </div>
+					                <div class="weui-cell__hd">
+					                    <input class="weui-check" name="checkbox1" disabled="disabled" value="man" id="s11" checked="checked" type="checkbox">
+					                    <i class="weui-icon-checked"></i>
+					                </div>
+					                
+					            </label>
+					            
+					         </div>
+					        </div>
+					        
+					        
+					        
+				        </div>
+
+
+		            </div>
+		            
+		        </div>
+		        <div class="share-footer">
+								<button class="buy-btn">确认购买</button>
+							</div>
+			     </div>
+		</div>
+		
+		
+	</div>
+
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/fastClick.js"></script>
+<script src="js/jquery-weui.js"></script>
+<script src="js/city-picker.js"></script>
+<script type="text/javascript">
+//	点击按钮增加减少商品数量js
+	var MAX = 99, MIN = 1;
+	$('.weui-count__decrease').click(function (e) {
+	  var $input = $(e.currentTarget).parent().find('.weui-count__number');
+	  var number = parseInt($input.val() || "0") - 1
+	  if (number < MIN) number = MIN;
+	  $input.val(number);
+	  var ordergoods=$(".order-goods-number").html();
+	  var ordernumber=number;
+      var all=ordergoods*ordernumber;
+      console.log(all)
+      var all1=all.toFixed(2);
+	  $(".total-all").html(all1);
+	})
+	$('.weui-count__increase').click(function (e) {
+	  var $input = $(e.currentTarget).parent().find('.weui-count__number');
+	  var number = parseInt($input.val() || "0") + 1
+	  if (number > MAX) number = MAX;
+	  $input.val(number);
+	  var ordergoods=$(".order-goods-number").html();
+	  var ordernumber=number;
+      var all=ordergoods*ordernumber;
+      console.log(all)
+      var all1=all.toFixed(2);
+	  $(".total-all").html(all1);
+
+	})
+
+	
+</script>
+<script type="text/javascript">
+    $(function(){
+
+        var $toast = $('#toast');
+        //点击确认购买按钮
+        $('.buy-btn').on('click', function(){
+       //获取信息
+        	var name=$("#or-name").html().trim();
+        	var id=$("#or-id").html().trim();
+        	var add=$("#or-add").html().trim();
+        	var msg = '', bool = false;
+        	
+        	if(name == '' || id =='' || add == ''){
+        		bool = true;
+        		msg = '请填写收货地址';
+        	}
+        
+        	if(bool){
+	        	$('.weui-toptips').html(msg).fadeIn(200);
+	        	setTimeout(function() {
+	                $('.weui-toptips').fadeOut(100);
+	            }, 2000);
+	        }else{
+	            $toast.fadeIn(100);
+	            //发送后台
+	        	$.ajax({
+	        		url: '',
+	        		data: {
+	        			password: password,
+	        			new_password: new_password
+	        		},
+	        		type: 'post',
+	        		success: function(res){
+	        			///console.log(res);
+	        			setTimeout(function () {
+			                //$toast.fadeOut(100);
+			                window.location.replace('my.html');
+			            }, 1000);
+	        		},
+	        		error: function(e){
+	        			//console.log(e);
+	        			setTimeout(function () {
+			                //$toast.fadeOut(100);
+			                window.location.replace('my.html');
+			            }, 1000);
+	        		}
+	        	});
+	        }
+        });
+    });
+</script>
+
+</body>
+</html>
