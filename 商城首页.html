@@ -14,7 +14,7 @@
 	
 	<div id="container" class="container" >
         
-		<div class="page tabbar js_show">
+		<div id="parent" class="page tabbar js_show">
 			<div class="page__bd" style="height: 100%;">
 				<div class="weui-tab">
 		            <div class="weui-tab__panel pad0">
@@ -30,74 +30,91 @@
                                      <ul id="list" class="demos-content-padded">
                                      	
                                         <li>
+                                        	<a href="商品详情.html">
                                             <div class="st-col1">
                                              <img class="st-goods-img" src="img/1.png" alt="">
-                                             <p class="st-goods-name">爱上门智能体温计ASM-TW-11111dsfasfa阿萨法啊发顺丰</p>
+                                             <p class="st-goods-name">爱上门智能体温计ASM-TW-11111dsfasfa阿萨法</p>
                                              <p class="st-goods-price">¥<span>283.10</span></p>
                                              <p class="st-sold">已售：<span>25644</span></p>
                                             </div>
+                                            </a>
                                         </li>
                                         <li>
+                                        	<a href="商品详情.html">
                                             <div class="st-col1">
                                                 <img class="st-goods-img" src="img/2.png" alt="">
                                                 <p class="st-goods-name">爱上门智能体温计ASM-TW-1</p>
                                                 <p class="st-goods-price">¥<span>283.10</span></p>
                                                 <p class="st-sold">已售：<span>25644</span></p>
                                             </div>
+                                            </a>
                                         </li>
                                         <li>
+                                        	<a href="商品详情.html">
                                             <div class="st-col1">
                                              <img class="st-goods-img" src="img/3.png" alt="">
                                              <p class="st-goods-name">爱上门智能体温计ASM-TW-1</p>
                                              <p class="st-goods-price">¥<span>283.10</span></p>
                                              <p class="st-sold">已售：<span>25644</span></p>
                                             </div>
+                                            </a>
                                          </li>
                                          <li>
+                                         	<a href="商品详情.html">
                                                 <div class="st-col1">
                                                  <img class="st-goods-img" src="img/3.png" alt="">
                                                  <p class="st-goods-name">爱上门智能体温计ASM-TW-1</p>
                                                  <p class="st-goods-price">¥<span>283.10</span></p>
                                                  <p class="st-sold">已售：<span>25644</span></p>
                                                 </div>
+                                                </a>
                                          </li>
                                          <li>
+                                         	<a href="商品详情.html">
                                             <div class="st-col1">
                                              <img class="st-goods-img" src="img/3.png" alt="">
                                              <p class="st-goods-name">爱上门智能体温计ASM-TW-1</p>
                                              <p class="st-goods-price">¥<span>283.10</span></p>
                                              <p class="st-sold">已售：<span>25644</span></p>
                                             </div>
+                                            </a>
                                          </li>
                                          <li>
+                                         	<a href="商品详情.html">
                                             <div class="st-col1">
                                              <img class="st-goods-img" src="img/3.png" alt="">
                                              <p class="st-goods-name">爱上门智能体温计ASM-TW-1</p>
                                              <p class="st-goods-price">¥<span>283.10</span></p>
                                              <p class="st-sold">已售：<span>25644</span></p>
                                             </div>
+                                            </a>
                                          </li>
                                          <li>
+                                         	<a href="商品详情.html">
                                             <div class="st-col1">
                                              <img class="st-goods-img" src="img/3.png" alt="">
                                              <p class="st-goods-name">爱上门智能体温计ASM-TW-1</p>
                                              <p class="st-goods-price">¥<span>283.10</span></p>
                                              <p class="st-sold">已售：<span>25644</span></p>
                                             </div>
+                                            </a>
                                          </li>
                                          <li>
+                                         	<a href="商品详情.html">
                                             <div class="st-col1">
                                              <img class="st-goods-img" src="img/3.png" alt="">
                                              <p class="st-goods-name">爱上门智能体温计ASM-TW-1</p>
                                              <p class="st-goods-price">¥<span>283.10</span></p>
                                              <p class="st-sold">已售：<span>25644</span></p>
                                             </div>
+                                            </a>
                                          </li>                                                                      
                                      </ul>
-                                     <img id="cart" class="shopping-cart" src="img/shopping-cart.png" alt="">
+											<img onclick="window.location.href='购物车.html'" id="cart" class="shopping-cart" src="img/shopping-cart.png" alt="">
+											
                                      <div class="weui-loadmore">
 								          <i class="weui-loading"></i>
-								          <span class="weui-loadmore__tips">正在加载</span>
+								          <span class="weui-loadmore__tips">下拉刷新</span>
 								        </div>
                          
                                  </div>
@@ -115,11 +132,8 @@
 	</div>
 
 <script type="text/javascript" src="js/zepto.min.js"></script>
-<script type="text/javascript" src="js/fastClick.js"></script>
-
 <script src="js/city-picker.js"></script>
 <script src="js/swiper.js"></script>
-
 <script>
     // 轮播图
       $(".swiper-container").swiper({
@@ -128,15 +142,9 @@
       });
 </script>
 <script src="js/jquery-2.1.4.js"></script>
-<script src="js/fastClick.js"></script>
-<script>
-      $(function() {
-        FastClick.attach(document.body);
-      });
-</script>
 <script src="js/jquery-weui.js"></script>
     
-        <script>
+<script>
           var loading = false;
           $(document.body).infinite().on("infinite", function() {
             if(loading) return;
@@ -151,54 +159,8 @@
               loading = false;
             }, 2000);
           });
-        </script>
-<script>
-    window.onload=function(){
-        var flag = 0; //标记是拖曳还是点击
-        var oDiv = document.getElementById('cart');
-        var disX,moveX,L,T,starX,starY,starXEnd,starYEnd;
-        oDiv.addEventListener('touchstart',function(e){
-            flag = 0;
-            e.preventDefault();//阻止触摸时页面的滚动，缩放
-            disX = e.touches[0].clientX - this.offsetLeft;
-            disY = e.touches[0].clientY - this.offsetTop;
-//手指按下时的坐标
-            starX = e.touches[0].clientX;
-            starY = e.touches[0].clientY;
-//console.log(disX);
-        });
-        oDiv.addEventListener('touchmove',function(e){
-            flag = 1;
-            L = e.touches[0].clientX - disX ;
-            T = e.touches[0].clientY - disY ;
-//移动时 当前位置与起始位置之间的差值
-            starXEnd = e.touches[0].clientX - starX;
-            starYEnd = e.touches[0].clientY - starY;
-//console.log(L);
-            if(L<0){//限制拖拽的X范围，不能拖出屏幕
-                L = 0;
-            }else if(L > document.documentElement.clientWidth - this.offsetWidth){
-                L=document.documentElement.clientWidth - this.offsetWidth;
-            }
-            if(T<0){//限制拖拽的Y范围，不能拖出屏幕
-                T=0;
-            }else if(T>document.documentElement.clientHeight - this.offsetHeight){
-                T = document.documentElement.clientHeight - this.offsetHeight;
-            }
-            moveX = L + 'px';
-            moveY = T + 'px';
-//console.log(moveX);
-            this.style.left = moveX;
-            this.style.top = moveY;
-        });
-        window.addEventListener('touchend',function(e){
-//alert(parseInt(moveX))
-//判断滑动方向
-            if(flag === 0) {//点击
-                window.location.href='购物车.html';
-                    }
-        });
-    }
 </script>
+
+
 </body>
 </html>

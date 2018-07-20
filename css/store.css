@@ -2,6 +2,9 @@ body, html {
   height: 100%;
   -webkit-tap-highlight-color: transparent;
 }
+#parent{ 
+       position: relative;
+}
 .st-goods-list ul li{
     float: left;
     width: 46%;

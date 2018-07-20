@@ -317,7 +317,6 @@
 	border: 1px solid #C9C9C9;
 	border-radius: 5px;
 	margin-left: 8px;
-	color: #565656;
 }
 .comm-details p{
 	font-size: 0.75rem;
@@ -482,6 +481,10 @@
 	margin-top: 50px;
 	margin-bottom: 10px;
 	text-align: center;
+}
+.ys-active{
+	background-color: #FF0002;
+	color: #fff;
 }
 /*评论*/
 .comm-col-pl{

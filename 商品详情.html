@@ -159,7 +159,7 @@
 			<div class="ms-area1-cont">
 				<h1 class="ms-cont-col1">¥<span>235</span></h1>
 				<p class="ms-cont-col2">库存<span>255</span></p>
-				<p class="ms-cont-col3">白色</p>
+				<p class="ms-cont-col3">黄</p>
 			</div>
 			<div class="ms-area1-close">
 				<img class="ms-colse-btn" src="img/ms-colse.png" alt="" />
@@ -172,7 +172,7 @@
 					</div>
 					<div class="comm-col2-main">
 					<ul>
-						<li>黄</li>
+						<li class="ys-active">黄</li>
 						<li>白</li>
 						<li>蓝</li>
 						<li>红</li>
@@ -259,7 +259,7 @@
  })
  //点击加入购物车
  $(".area3-shopping-cart").click(function () {
- 	window.location.href="购物车.html";
+ 	alert("已经加入购物车")
  })
  //点击立即购买
  $(".area3-shopping-buy").click(function () {
@@ -271,9 +271,9 @@
         autoplay: 3000
       });
 //    点击隐藏显示js
-
 	  $(".comm-col2-main ul li").click(function() {
 	  	var tx = $(this).html();
+	  	$(this).addClass("ys-active").siblings().removeClass("ys-active");
 	  	$(".ms-cont-col3").html(tx);
 	  })
     </script>
