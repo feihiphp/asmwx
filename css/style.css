@@ -93,7 +93,7 @@
 .footer-main{
 	overflow: hidden;
 }
-.footer-main a{
+.footer-main button{
 	line-height: 2rem;
 	float: left;
 }
@@ -335,6 +335,9 @@
 	padding: 0px 10%;
 	width: 80%;
 	display: inline-block;
+}
+.de-imgall-main p span{
+	font-size: 20px;
 }
 .de-imgall{
 	margin-top: 10px;

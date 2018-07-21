@@ -101,7 +101,7 @@
 								          	<p class="sh-col1-name">爱上门 智能电子温度计 智能体温计ASM-WB-1</p>
 								          	<div class="sh-col1-area">
 								          		<div class="sh-col1-pr"><strong>价格：</strong><p>¥<span class="sh-pr-number">348</span></p></div>
-								          		<div class="sh-col1-count">x<span>5</span></div>
+								          		<div class="sh-col1-count">x<span>3</span></div>
 								          	</div>
 								          </div>
 								      </label>					 
@@ -146,23 +146,27 @@
 				        </div>
 						   	 	
 						   	 	<div class="gwc-total">
-						   	 		<p>小计：<span>¥</span><span class="total-all">123.87</span></p>
+						   	 		<div style="text-align: right;">
+						   	 			<div style="display: inline-block;margin-right: 10px;">共<span style="color: #565656;letter-spacing: 1px;" id="final-foot">1</span>件商品</div>
+						   	 			小计：<span>¥</span>
+						   	 			<span class="total-all">1</span>
+						   	 		</div>
 						   	 	</div>
 						   	 </div>
 						   </div>
 						   
-						   <div class="weui-cells_form order-col3">
+						   <div class="weui-cells_form order-col3" style="height: 300px;">
 						   	<div class="order-col3-title">
 						   		<p>支付方式</p>
 						   	</div>
 						   	<div class="weui-cells_checkbox">
-					            <label class="weui-cell weui-check__label" for="s11">
+					            <label class="weui-cell weui-check__label" for="s01" style="width: 100%;">
 					            	    <div class="weui-cell__bd order-area3">
-					            	      	<img src="img/order-weixin.png" alt="" />
+					            	      	<img src="img/order-weixin.png" alt="">
 					                    <p>微信</p>
 					                </div>
-					                <div class="weui-cell__hd">
-					                    <input class="weui-check" name="checkbox1" disabled="disabled" value="man" id="s11" checked="checked" type="checkbox">
+					                <div class="weui-cell__hd" style="padding-right: 20px;">
+					                    <input class="weui-check" name="checkbox1" disabled="disabled" value="man" id="s01" checked="checked" type="checkbox">
 					                    <i class="weui-icon-checked"></i>
 					                </div>
 					                
@@ -179,9 +183,16 @@
 		            </div>
 		            
 		        </div>
-		        <div class="share-footer">
-								<button class="buy-btn">确认购买</button>
-							</div>
+		        <div class="comm-footer">
+					        	    <div class="footer-main-col" style="background-color: #F3F3F3;">
+					        	    	 
+					        	    <div class="sh-btn-pr">
+					        	     	<strong class="sh-btn-total">合计：</strong>
+					        	     	<p>¥<span id="allPrice">5050</span></p>
+					        	    	</div>
+					        	    </div>
+								<button style="border-top: 0px;" id="btn-final" class="btn-final">提交订单</button>
+					</div>
 			     </div>
 		</div>
 		
@@ -191,7 +202,6 @@
 <script type="text/javascript" src="js/zepto.min.js"></script>
 <script type="text/javascript" src="js/fastClick.js"></script>
 <script src="js/jquery-weui.js"></script>
-<script src="js/city-picker.js"></script>
 <script type="text/javascript">
 //	点击按钮增加减少商品数量js
 	var MAX = 99, MIN = 1;
@@ -224,55 +234,37 @@
 	
 </script>
 <script type="text/javascript">
-    $(function(){
+	//  计算价格
+        function $y(x){
+          return document.querySelector(x);
+        }
+        function $s(x){
+          return document.querySelectorAll(x);
+        }
+        var Price=0;
+        var btns=$s("li .sh-pr-number");
+        var display=$y("#allPrice");
+        var toall=$y(".total-all"); 
+        var fina=$y("#final-foot");
+        var length=btns.length;
+// 计算总价js
+            Price=0;
+            for(var i=0;i<length;i++){
+                
+                    Price += parseInt($s(".sh-col1-count span")[i].innerHTML) * parseInt($s(".sh-pr-number")[i].innerHTML);
+                
 
-        var $toast = $('#toast');
-        //点击确认购买按钮
-        $('.buy-btn').on('click', function(){
-       //获取信息
-        	var name=$("#or-name").html().trim();
-        	var id=$("#or-id").html().trim();
-        	var add=$("#or-add").html().trim();
-        	var msg = '', bool = false;
-        	
-        	if(name == '' || id =='' || add == ''){
-        		bool = true;
-        		msg = '请填写收货地址';
-        	}
-        
-        	if(bool){
-	        	$('.weui-toptips').html(msg).fadeIn(200);
-	        	setTimeout(function() {
-	                $('.weui-toptips').fadeOut(100);
-	            }, 2000);
-	        }else{
-	            $toast.fadeIn(100);
-	            //发送后台
-	        	$.ajax({
-	        		url: '',
-	        		data: {
-	        			password: password,
-	        			new_password: new_password
-	        		},
-	        		type: 'post',
-	        		success: function(res){
-	        			///console.log(res);
-	        			setTimeout(function () {
-			                //$toast.fadeOut(100);
-			                window.location.replace('my.html');
-			            }, 1000);
-	        		},
-	        		error: function(e){
-	        			//console.log(e);
-	        			setTimeout(function () {
-			                //$toast.fadeOut(100);
-			                window.location.replace('my.html');
-			            }, 1000);
-	        		}
-	        	});
-	        }
-        });
-    });
+            }
+            display.innerHTML=Price;
+            toall.innerHTML=Price;
+//计算总数js
+        var total = 0;
+		for(var i=0;i<length;i++){              
+                    total +=  parseInt($s(".sh-col1-count span")[i].innerHTML);            
+            }
+		fina.innerHTML=total;
+//点击提交按钮跳转支付页面
+
 </script>
 
 </body>

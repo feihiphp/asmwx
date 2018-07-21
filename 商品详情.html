@@ -7,6 +7,7 @@
 <title>商品详情</title>
 <link rel="stylesheet" type="text/css" href="css/example.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/share.css">
 <link rel="stylesheet" href="css/weui.min.css">
 <link rel="stylesheet" href="css/jq-weui.css">
 </head>
@@ -139,7 +140,7 @@
 		        </div>
 		        <div class="comm-footer">
 					        	    <div class="footer-main">
-					        	    	 <a class="comm-footer-share" href=""><img src="img/share.png" alt="" /></a>
+					        	    	 <button class="comm-footer-share co-share"><img src="img/share.png" alt="" /></button>
 					        	    <p>¥<span>758.10</span></p>
 					        	    </div>
 								<button class="buy-now">立即购买</button>
@@ -203,8 +204,29 @@
 			
 		</div>
 	</div>
+	<div class="asm-share">
+			<div class="share-img">
+				<ul class="share-main">
+					<li>
+						<a href=""><img src="img/icon_QQ@2x.png" alt=""></a>
+						<p>分享到QQ</p>
+					</li>
+					<li>
+						<a href=""><img src="img/icon_weixin@2x.png" alt=""></a>
+						<p>分享到微信</p>
+					</li>
+					<li>
+						<a href=""><img src="img/icon_pengyouquan@2x.png" alt=""></a>
+						<p>分享到朋友圈</p>
+					</li>
+				</ul>
+			</div>
+			<div class="shares-footer">
+				<p class="share-cancel">取消</p>
+			</div>
+		</div>
 </div>
-
+<div id="BgDiv1" class="share-cancel" style="display: none;"></div>
 <script type="text/javascript" src="js/zepto.min.js"></script>
 <script type="text/javascript" src="js/fastClick.js"></script>
 <script src="js/jquery-weui.js"></script>
@@ -277,5 +299,16 @@
 	  	$(".ms-cont-col3").html(tx);
 	  })
     </script>
+ <script>
+	
+	$(".co-share").click(function(){
+		$(".asm-share").toggle(500);
+		$("#BgDiv1").toggle(500);
+      });
+	  $(".share-cancel").click(function(){
+		$(".asm-share").toggle(500);
+		$("#BgDiv1").toggle(500);
+      });
+</script> 
 </body>
 </html>
