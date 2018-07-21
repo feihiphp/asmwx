@@ -93,7 +93,7 @@
 .footer-main{
 	overflow: hidden;
 }
-.footer-main button{
+.footer-main span{
 	line-height: 2rem;
 	float: left;
 }
