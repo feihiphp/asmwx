@@ -204,7 +204,7 @@
 			
 		</div>
 	</div>
-	<div class="asm-share">
+	<!--<div class="asm-share">
 			<div class="share-img">
 				<ul class="share-main">
 					<li>
@@ -224,9 +224,10 @@
 			<div class="shares-footer">
 				<p class="share-cancel">取消</p>
 			</div>
-		</div>
+		</div>-->
 </div>
 <div id="BgDiv1" class="share-cancel" style="display: none;"></div>
+<img style="display: none;" class="fx-btn" src="img/fx-btn.png" alt="" />
 <script type="text/javascript" src="js/zepto.min.js"></script>
 <script type="text/javascript" src="js/fastClick.js"></script>
 <script src="js/jquery-weui.js"></script>
@@ -302,13 +303,13 @@
  <script>
 	
 	$(".co-share").click(function(){
-		$(".asm-share").fadeToggle(500);
+		$(".fx-btn").fadeToggle(500);
 		$("#BgDiv1").fadeToggle(500);
       });
 	  $(".share-cancel").click(function(){
-		$(".asm-share").fadeToggle(200);
+		$(".fx-btn").fadeToggle(200);
 		$("#BgDiv1").fadeToggle(200);
       });
-</script> 
+</script>
 </body>
 </html>
