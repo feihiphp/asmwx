@@ -1,0 +1,89 @@
+.container{
+    background: url(../img/login-bg.png);
+    background-size: 100%;
+}
+.page_title_add{
+    color: #fff;
+}
+.center-logo{
+    text-align: center;
+    padding: 30px 0;
+}
+.lo-phone-number{
+	margin: 0 auto;
+	width: 60%;
+	border-bottom: 1px solid #fff;
+	padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+.lo-we-ensure{
+    width: 60%;
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 0.5rem 1rem;
+	border-radius: 1.5rem;
+	text-align: center;
+}
+.lo-we-ensure-btn{
+	font-size: 1.2rem;
+	color: #605559;
+	display: block;
+	cursor: pointer;
+}
+.weui-input{
+    color: #fff !important;
+}
+.register{
+    float: left;
+}
+.lo-col-password{
+    margin-bottom: 2rem;
+}
+.lo-we-notpwd{
+	width: 70%;
+	overflow: hidden;
+	margin: 0 auto;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.lo-we-notpwd a{
+    overflow: hidden;
+	font-size: 0.85rem;
+	color: #fff;
+}
+.lo-register{
+    float: left;
+}
+.lo-notpwd{
+    float: right;
+}
+.lo-img-ph{
+    float: left;
+    width: 1.2rem;
+    height: 1.4rem;
+}
+.lo-img-x{
+    float: right;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.lo-img-pa{
+    float: left;
+    width: 1.2rem;
+    height: 1.4rem;
+}
+.weui-input{
+    float: left;
+    width: 60%;
+    font-size: 0.85rem;
+    height: 1.4rem;
+    padding-left: 1rem;
+}
+.we-username,.we-password{
+    overflow: hidden;
+}
+/* 替换掉input 默认颜色 */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+color: #fff;
+}

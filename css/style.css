@@ -344,18 +344,18 @@
 	margin-bottom: 50px;
 }
 .footer-main{
-	width: 40%;
+	width: 32%;
 	float: left;
 }
 .footer-main p{
-	text-align: right;
+	text-align: left;
 	font-size: 0.75rem;
 	line-height: 2rem;
 	color: #FF3B3C;
-	float: right;
+	float: left;
 }
-.footer-main p span{
-	padding-right: 20px;
+.footer-main p{
+	padding-left: 20px;
 }
 .comm-footer{
 	position: fixed;
@@ -365,11 +365,45 @@
 	overflow: hidden;
 	border-top: 1px solid #CCCCCC;
 }
-.buy-now{
-	width: 60%;
-	float: right;
-	background-color: #FF3B3C;
+.cart-add{
+	width: 25%;
+	float: left;
+	display: block;
+	background-color: #fa740b;
+	font-size: 0.6rem;
+	line-height: 2rem;
+	color: #fff;
+	border: 0;
+	text-align: center;
+	border-top: 1px solid #fa740b;
+}
+.comm-kefu{
+	float: left;
+	width: 18%;
+	height: 2rem;
+}
+.comm-kefu a{
+	display: block;
+}
+.comm-kefu a img{
+	width: 0.75rem;
+	height: 0.75rem;
+	display: block;
+	margin: 0 auto;
+	padding-top: 0.15rem;
+	padding-bottom: 0.1rem;
+}
+.comm-kefu a p{
+	line-height: 1rem;
 	font-size: 0.75rem;
+	text-align: center;
+	color: #565656;
+}
+.buy-now{
+	width: 25%;
+	float: left;
+	background-color: #FF3B3C;
+	font-size: 0.6rem;
 	line-height: 2rem;
 	color: #fff;
 	border: 0;
@@ -651,7 +685,7 @@
 .ev-show {
 	display: block;
 	color: #fff;
-	background-image: url(../img/ev-all.png);
+	background-color: #ff1818;
 	background-size: 100%;
 }
 .ev-list-all{
@@ -661,3 +695,11 @@
 	display: block;
 }
 
+@media only screen and (max-width: 350px) {
+	.footer-main p{
+	padding-left: 5px;
+    }
+    .comm-kefu a p{
+    	 font-size: 0.6rem;
+    }
+}

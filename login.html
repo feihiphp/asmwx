@@ -8,11 +8,12 @@
 <link rel="stylesheet" type="text/css" href="css/weui.min.css">
 <link rel="stylesheet" type="text/css" href="css/example.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>
 	<div class="weui-toptips weui-toptips_warn js_tooltips"></div>
 	<div id="container" class="container">
-		<div class="page tabbar js_show">
+		<div class="tabbar js_show">
 			<div class="page__bd" style="height: 100%;">
 				<div class="weui-tab">
 		            <div class="weui-tab__panel pad0">
@@ -20,31 +21,35 @@
 						<!-- 头部 -->
 		            	<div class="we-title">
 					        
-					        	<a href="register.html" class="page_title_add">注册</a>
-					        	<a class="page-left" href="index.html"><img src="img/back_icon.png" alt="" /></a>
+					        	<a href="register.html" class="page_title_add">跳过</a>
 					       
 					    </div>
 						<div class="page__bd pad50">
 			            	<div class="center-logo">
-			            		<img src="img/logo.png" alt="" />
+			            		<img src="img/login-header.png" alt="" />
 			            	</div>
 			                <div class="page__bd">
-			              	 <div class="phone-number">
+			              	 <div class="lo-phone-number">
 			            		  <div class="we-username">
-			            			<input class="weui-input" maxlength="13" name="username" pattern="[0-9]*" placeholder="请输入手机号码" type="number">
+									<img class="lo-img-ph" src="img/lo-phone.png" alt="">
+									<input id="lo-input-username" class="weui-input" maxlength="13" name="username" pattern="[0-9]*" placeholder="在此输入手机号码" type="number">
+									<img class="lo-img-x" src="img/x.png" alt="">
 			            		  </div>
 					        </div>
-					        <div class="phone-number">
+					        <div class="lo-phone-number lo-col-password">
 			            		  <div class="we-password">
+									<img class="lo-img-pa" src="img/lo-password.png" alt="">
 			            			<input class="weui-input" maxlength="16" name="password" pattern="[0-9]*" placeholder="请输入密码" type="password">
 			            		  </div>
 					        </div>
-			            	   <div class="we-notpwd">
-			            	   	<a href="#" class="notpwd gary">忘记密码？</a>
-			            	   </div>
-					        <div class="we-ensure">
-					            <a class="we-ensure-btn" href="javascript:" id="showTooltips">登录</a>
-					        </div>
+			            	
+					        <div class="lo-we-ensure">
+					            <a class="lo-we-ensure-btn" href="javascript:" id="showTooltips">登录</a>
+							</div>
+							<div class="lo-we-notpwd">
+								<a href="#" class="lo-register">注册账号</a>
+			            	   	<a href="#" class="lo-notpwd gary">忘记密码？</a>
+			            	</div>
 
 				        </div>
 					        
@@ -121,6 +126,11 @@
 	        }
         });
     });
+</script>
+<script>
+ $(".lo-img-x").click(function () {
+	 $("#lo-input-username").val('');
+ })
 </script>
 </body>
 </html>
