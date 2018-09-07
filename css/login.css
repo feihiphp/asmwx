@@ -82,6 +82,20 @@
 .we-username,.we-password{
     overflow: hidden;
 }
+.lo-vcode-img{
+    float: right;
+    width: 35%;
+    height: 1.4rem;
+}
+.lo-vcode-phone{
+    float: right;
+    color: #61565a;
+    font-size: 0.6rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2px 5px;
+
+}
 /* 替换掉input 默认颜色 */
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {

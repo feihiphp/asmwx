@@ -2,7 +2,9 @@
 .page__title{text-align: center; position: relative;}
 .page__bd.mt12{margin-top: 12px;}
 .page_title_add{float: right; font-weight: normal; color: #aaa; font-size: 20px; padding-left: 17px; cursor: pointer;}
-
+li{
+	list-style: none;
+}
 
 
 
